@@ -56,14 +56,6 @@ const About = () => {
                     </Button>
                 </div>
             </div>
-            {/* <div className="flex w-36 flex-col gap-4">
-                <Button variant="outline" className="gap-2">
-                    이메일
-                </Button>
-                <Button variant="outline" className="gap-2">
-                    GitHub
-                </Button>
-            </div> */}
         </section>
     )
 }
