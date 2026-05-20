@@ -1,6 +1,8 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 
-import { GitBranch, Mail } from "lucide-react"
+import { Copy, GitBranch, Link, Mail } from "lucide-react"
 
 const About = () => {
     return (
@@ -17,20 +19,51 @@ const About = () => {
                     개선해 나가는 과정을 좋아합니다.
                 </p>
                 <p>
-                    "유지보수가 쉽고, 확장 가능하며, 재사용 가능한 코드를
+                    유지보수가 쉽고, 확장 가능하며, 재사용 가능한 코드를
                     작성하기 위해 노력합니다."
                 </p>
             </div>
-            <div className="flex gap-4">
-                <Button variant="outline" className="gap-2">
+            <div>
+                <div className="flex items-center gap-2">
                     <Mail className="size-4" />
+                    <p>이메일</p>
+                    <Button
+                        variant="ghost"
+                        onClick={() => {
+                            navigator.clipboard.writeText("ruyria@naver.com")
+                        }}
+                        className="text-primary"
+                    >
+                        <Copy />
+                        복사하기
+                    </Button>
+                </div>
+                <div className="flex items-center gap-2">
+                    <GitBranch className="size-4" />
+                    <p>GitHub</p>
+                    <Button
+                        variant="ghost"
+                        onClick={() => {
+                            window.open(
+                                "https://github.com/DL-Berkey",
+                                "_blank"
+                            )
+                        }}
+                        className="text-primary"
+                    >
+                        <Link />
+                        바로가기
+                    </Button>
+                </div>
+            </div>
+            {/* <div className="flex w-36 flex-col gap-4">
+                <Button variant="outline" className="gap-2">
                     이메일
                 </Button>
                 <Button variant="outline" className="gap-2">
-                    <GitBranch className="size-4" />
                     GitHub
                 </Button>
-            </div>
+            </div> */}
         </section>
     )
 }
