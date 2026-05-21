@@ -6,11 +6,16 @@ import { cn } from "@/lib/utils"
 import { pretendard } from "@/lib/font"
 import Header from "@/components/Header"
 
-export default function RootLayout({
+export const metadata = {
+    title: "김영준 | 프론트엔드 개발자",
+    description: "김영준의 포트폴리오",
+}
+
+const RootLayout = ({
     children,
 }: Readonly<{
     children: React.ReactNode
-}>) {
+}>) => {
     return (
         <html
             lang="ko"
@@ -28,3 +33,5 @@ export default function RootLayout({
         </html>
     )
 }
+
+export default RootLayout
