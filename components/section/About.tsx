@@ -2,7 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 
-import { Copy, GitBranch, Link, Mail } from "lucide-react"
+import { Copy, GitBranch, ExternalLink, Mail } from "lucide-react"
 
 const About = () => {
     return (
@@ -51,7 +51,7 @@ const About = () => {
                         }}
                         className="text-primary"
                     >
-                        <Link />
+                        <ExternalLink />
                         바로가기
                     </Button>
                 </div>

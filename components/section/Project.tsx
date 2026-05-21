@@ -44,7 +44,7 @@ const projectList: ProjectList = [
     },
 ]
 
-const Projects = () => {
+const Project = () => {
     return (
         <section className="flex flex-col gap-6">
             <SectionTitle
@@ -120,4 +120,4 @@ const Projects = () => {
     )
 }
 
-export default Projects
+export default Project

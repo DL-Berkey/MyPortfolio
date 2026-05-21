@@ -30,7 +30,7 @@ const skillData = [
     },
 ]
 
-const Skills = () => {
+const Skill = () => {
     return (
         <section className="flex flex-col gap-6">
             <SectionTitle
@@ -61,4 +61,4 @@ const Skills = () => {
     )
 }
 
-export default Skills
+export default Skill
