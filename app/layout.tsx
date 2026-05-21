@@ -2,6 +2,7 @@ import "./globals.css"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+
 import { pretendard } from "@/lib/font"
 
 export default function RootLayout({
@@ -17,7 +18,7 @@ export default function RootLayout({
         >
             <body>
                 <ThemeProvider>
-                    <div className="container mx-auto">{children}</div>
+                    <div className="container px-16 mx-auto">{children}</div>
                 </ThemeProvider>
             </body>
         </html>
