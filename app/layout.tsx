@@ -2,6 +2,7 @@ import "./globals.css"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
+import { Toaster } from "sonner"
 
 import { pretendard } from "@/lib/font"
 import Header from "@/components/Header"
@@ -25,6 +26,7 @@ const RootLayout = ({
             <body>
                 <ThemeProvider>
                     <div className="container mx-auto px-16">
+                        <Toaster />
                         <Header />
                         {children}
                     </div>

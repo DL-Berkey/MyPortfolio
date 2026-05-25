@@ -1,6 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
+import { toast } from "sonner"
 
 import { Copy, GitBranch, ExternalLink, Mail } from "lucide-react"
 
@@ -29,8 +30,16 @@ const About = () => {
                     <p>이메일</p>
                     <Button
                         variant="ghost"
-                        onClick={() => {
-                            navigator.clipboard.writeText("ruyria@naver.com")
+                        onClick={async () => {
+                            try {
+                                await navigator.clipboard.writeText(
+                                    "ruyria@naver.com"
+                                )
+
+                                toast.success("이메일 주소가 복사되었습니다.")
+                            } catch (err) {
+                                toast.error("이메일 주소 복사에 실패했습니다.")
+                            }
                         }}
                         className="text-primary"
                     >
