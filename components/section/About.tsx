@@ -27,7 +27,7 @@ const About = () => {
                     <span className="text-primary">{siteConfig.name}</span>
                     입니다.
                 </h1>
-                <div className="flex max-w-xl flex-col gap-3 text-base leading-relaxed text-foreground sm:text-lg">
+                <div className="flex max-w-xl flex-col gap-3 text-base leading-relaxed break-keep text-foreground sm:text-lg">
                     <p>
                         작은 아이디어라도 빠르게 구현해 보고, 피드백을 통해
                         조금씩 개선해 나가는 과정을 좋아합니다.
