@@ -2,10 +2,10 @@ import "./globals.css"
 
 import { ThemeProvider } from "@/components/theme-provider"
 import { cn } from "@/lib/utils"
-import { Toaster } from "sonner"
+import { Toaster } from "@/components/ui/sonner"
 
 import { pretendard } from "@/lib/font"
-import Header from "@/components/Header"
+import Navbar from "@/components/Navbar"
 
 export const metadata = {
     title: "김영준 | 프론트엔드 개발자",
@@ -21,15 +21,18 @@ const RootLayout = ({
         <html
             lang="ko"
             suppressHydrationWarning
-            className={cn("antialiased", "font-sans", pretendard.className)}
+            className={cn(
+                "antialiased",
+                "font-sans",
+                pretendard.variable,
+                pretendard.className
+            )}
         >
             <body>
                 <ThemeProvider>
-                    <div className="container mx-auto px-16">
-                        <Toaster />
-                        <Header />
-                        {children}
-                    </div>
+                    <Toaster />
+                    <Navbar />
+                    <main className="mx-auto max-w-3xl px-6">{children}</main>
                 </ThemeProvider>
             </body>
         </html>

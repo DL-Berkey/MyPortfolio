@@ -1,9 +1,8 @@
 import { Badge } from "../ui/badge"
-import { Card, CardContent, CardHeader, CardTitle } from "../ui/card"
 
 import SectionTitle from "./SectionTitle"
 
-const skillData = [
+const skillDataList = [
     {
         title: "언어",
         skillList: ["HTML5", "CSS3", "JavaScript", "TypeScript"],
@@ -32,29 +31,33 @@ const skillData = [
 
 const Skill = () => {
     return (
-        <section className="flex flex-col gap-6">
+        <section id="skill" className="scroll-mt-24">
             <SectionTitle
                 title="기술"
-                description=" 제가 주로 사용하고 익숙한 기술들입니다."
+                description="제가 주로 사용하고 익숙한 기술들입니다."
             />
-            <div className="grid gap-4 md:grid-cols-2">
-                {skillData.map((category, idx) => (
-                    <Card key={idx}>
-                        <CardHeader>
-                            <CardTitle>{category.title}</CardTitle>
-                        </CardHeader>
-                        <CardContent className="space-x-2">
+            <div className="mt-8 flex flex-col divide-y divide-border">
+                {skillDataList.map((category, idx) => (
+                    <div
+                        key={idx}
+                        className="flex flex-col gap-3 py-5 first:pt-0 sm:flex-row sm:items-start sm:gap-8"
+                    >
+                        <div className="flex h-5 items-center gap-2 sm:w-32 sm:shrink-0">
+                            <span className="size-1.5 rounded-full bg-primary" />
+                            <h3 className="font-bold">{category.title}</h3>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
                             {category.skillList.map((skill) => (
                                 <Badge
                                     key={skill}
                                     variant="secondary"
-                                    className="px-3 py-1 text-sm font-medium"
+                                    className="border border-border/60 px-3 py-1 text-sm font-semibold"
                                 >
                                     {skill}
                                 </Badge>
                             ))}
-                        </CardContent>
-                    </Card>
+                        </div>
+                    </div>
                 ))}
             </div>
         </section>

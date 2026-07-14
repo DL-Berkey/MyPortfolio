@@ -4,10 +4,10 @@ import Project from "@/components/section/Project"
 
 export default function Page() {
     return (
-        <main className="space-y-8 py-10 md:space-y-12">
+        <div className="flex flex-col gap-24 py-10 md:gap-28">
             <About />
             <Skill />
             <Project />
-        </main>
+        </div>
     )
 }
