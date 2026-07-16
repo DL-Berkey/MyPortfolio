@@ -29,12 +29,11 @@ const About = () => {
                 </h1>
                 <div className="flex max-w-xl flex-col gap-3 text-base leading-relaxed break-keep text-foreground sm:text-lg">
                     <p>
-                        작은 아이디어라도 빠르게 구현해 보고, 피드백을 통해
+                        작은 아이디어라도 빠르게 구현해 보고, 피드백을 받아
                         조금씩 개선해 나가는 과정을 좋아합니다.
                     </p>
                     <p>
-                        유지보수가 쉽고, 확장 가능하며, 재사용 가능한 코드를
-                        작성하기 위해 노력합니다.
+                        코드는 간단하게, 구조는 명확하게 만들려고 노력합니다.
                     </p>
                 </div>
             </div>
