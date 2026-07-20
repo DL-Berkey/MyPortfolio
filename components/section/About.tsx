@@ -37,7 +37,7 @@ const About = () => {
                     </p>
                 </div>
             </div>
-            <div className="flex flex-wrap items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3 print:hidden">
                 <Button onClick={copyEmail} className="gap-2">
                     <Copy className="size-4" />
                     이메일 복사
@@ -52,6 +52,9 @@ const About = () => {
                         GitHub
                     </a>
                 </Button>
+            </div>
+            <div className="hidden text-sm text-muted-foreground print:block">
+                {siteConfig.email} · {siteConfig.github}
             </div>
         </section>
     )
